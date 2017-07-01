@@ -34,7 +34,7 @@ export const sharedConfig: NgModule = {
 		CourseDetailComponent,
 		CourseItemComponent,
 		CourseEditComponent,
-		DropdownDirective
+		DropdownDirective,
     ],
 	imports: [
 		FormsModule,
@@ -49,5 +49,5 @@ export const sharedConfig: NgModule = {
             { path: '**', redirectTo: 'courses' }
         ])
 	],
-	providers: [CoursesService]  //Strange but you have to provide CoursesService here as well as in app.component.ts
+	providers: [CoursesService]  //Strange, but you have to provide CoursesService here as well as in app.component.ts
 };
