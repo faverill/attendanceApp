@@ -1,0 +1,29 @@
+<div style="margin: 0px 10px 0px 10px;">
+<div class="row">
+  <div class="col-xs-12" *ngIf="course">
+    <h1>{{course.name}}</h1>
+    <h5>{{course.teacher}}</h5>
+    <img src="{{course.teacherImagePath}}" alt="{{course.teacher}}" class="img-responsive" style="max-width: 200px;">
+    <p>{{course.description}}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn-group"
+    appDropdown>
+      <button type="button" class="btn btn-primary dropdown-toggle">
+        Manage Course <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a routerLink="/courses/{{course.id}}/edit">Edit Course</a></li>
+        <li><a href="#">Delete Course</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    Students
+  </div>
+</div>
+</div>

@@ -1,0 +1,19 @@
+
+<div class="row">
+  <div class="col-md-12">
+        <a
+          routerLink = "/courses/{{course.id}}"
+          routerLinkActive="active"
+           class="list-group-item clearfix"
+        >
+            <h4 class="list-group-item-heading">{{course.name}}</h4>
+            <p class="list-group-item-text">{{course.description}}</p>
+
+            <h3>{{course.teacher}}</h3>
+            <img src="{{course.teacherImagePath}}" alt="{{course.teacher}}" class="img-responsive" style="max-height: 50px;">
+            <p class="list-group-text">{{course.creationDate}}</p>
+
+        </a>
+
+  </div>
+</div>

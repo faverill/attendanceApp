@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+//import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { sharedConfig } from './app.module.shared';
 
@@ -8,13 +9,15 @@ import { sharedConfig } from './app.module.shared';
     bootstrap: sharedConfig.bootstrap,
     declarations: sharedConfig.declarations,
     imports: [
-        BrowserModule,
-        FormsModule,
+       BrowserModule,
+		FormsModule,
+		ReactiveFormsModule,
         HttpModule,
         ...sharedConfig.imports
     ],
-    providers: [
-        { provide: 'ORIGIN_URL', useValue: location.origin }
+    providers: [ 
+		{ provide: 'ORIGIN_URL', useValue: location.origin },
+		...sharedConfig.providers
     ]
 })
 export class AppModule {
