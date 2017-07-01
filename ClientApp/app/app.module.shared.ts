@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-//import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-//import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './components/app/app.component'
 
@@ -26,9 +24,6 @@ export const sharedConfig: NgModule = {
     bootstrap: [ AppComponent ],
     declarations: [
 		AppComponent,
-		//FormsModule,
-		//ReactiveFormsModule,
-        //HttpModule,
 		CoursesComponent,
 		CourseListComponent,
 		CourseDetailComponent,
