@@ -19,6 +19,11 @@ import { DropdownDirective } from './components/shared/dropdown.directive';
 
 import { CoursesService } from './components/courses/courses.service';
 
+//Questionable imports
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
+
 
 export const sharedConfig: NgModule = {
     bootstrap: [ AppComponent ],
@@ -32,6 +37,10 @@ export const sharedConfig: NgModule = {
 		DropdownDirective
     ],
 	imports: [
+		FormsModule,
+		ReactiveFormsModule,
+		HttpModule,
+		BrowserModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'courses', pathMatch: 'full' },
 			{ path: 'courses', component: CourseListComponent },
